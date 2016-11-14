@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="com.rayact.gym.domain.Dept" table="gym_dept">
+		<id name="did" column="did">
+			<generator class="native"/>
+		</id>
+		
+		<property name="dname" column="dname"/>
+		<property name="dinfo" column="dinfo"/>
+		
+		<set name="emps">
+			<key column="dno"/>
+			<one-to-many class="com.rayact.gym.domain.Emp"/>
+		</set>
+	</class>
+</hibernate-mapping>

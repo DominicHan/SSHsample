@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.rayact.gym.domain.Emp" table="gym_emp">
+		<id name="eid" column="eid">
+			<generator class="native"/>
+		</id>
+		
+		<property name="ename" column="ename"/>
+		<property name="sex" column="sex"/>
+		<property name="birthday" column="birthday"/>
+		<property name="entry_date" column="entry_date"/>
+		<property name="eno" column="eno"/>
+		
+		<many-to-one name="dept" class="com.rayact.gym.domain.Dept" column="dno"></many-to-one>
+	</class>
+</hibernate-mapping>
