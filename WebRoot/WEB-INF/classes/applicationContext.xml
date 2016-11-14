@@ -37,6 +37,12 @@
 			</props>
 		</property>
 		
+		<property name="mappingResources">
+			<list>
+				<value>com/rayact/gym/domain/Dept.hbm.xml</value>
+				<value>com/rayact/gym/domain/Emp.hbm.xml</value>
+			</list>
+		</property>
 	</bean>
 	
 	<!-- 事务管理 -->
@@ -45,4 +51,6 @@
 	</bean>
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	<import resource="applicationContext2.xml"/>
 </beans>

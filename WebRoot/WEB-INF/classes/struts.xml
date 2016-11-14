@@ -4,9 +4,9 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-	<package name="book" extends="struts-default" namespace="/">
-		<action name="book_*" class="bookAction" method="{1}">
-			
+	<package name="gym" extends="struts-default" namespace="/">
+		<action name="emp_*" class="empAction" method="{1}">
+			<result name="registUI">/jsp/staff/register.jsp</result>
 		</action>
 	</package>
 </struts>
